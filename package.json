@@ -5,7 +5,8 @@
   "scripts": {
     "install:pod": "cd ios && pod install",
     "postinstall": "patch-package",
-    "postversion": "react-native-version"
+    "postversion": "react-native-version",
+    "test": "jest test"
   },
   "rnpm": {
     "assets": [
@@ -61,6 +62,7 @@
     "react-test-renderer": "16.9.0"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "setupFiles": ["./jestSetupFile.js"]
   }
 }
